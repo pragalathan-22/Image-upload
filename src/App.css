@@ -1,0 +1,51 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  text-align: center;
+}
+
+.upload-input {
+  margin: 20px;
+}
+
+.image-preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-preview {
+  max-width: 500px;
+  max-height: 400px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}

@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react';
+import ImageGallery from './component/ImageGallery';
+import './App.css';
+import 'font-awesome/css/font-awesome.min.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="app">
-      <h1>Hello World!</h1>
+    <div>
+      <ImageGallery />
     </div>
   );
-}
+};
 
 export default App;

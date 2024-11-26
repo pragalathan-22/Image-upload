@@ -1,0 +1,253 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gallery-container {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Hidden Input Field */
+.upload-input {
+    display: none;
+}
+
+/* Custom Upload Button */
+.upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.upload-label:hover {
+    background-color: #0056b3;
+}
+
+/* Image Grid and Image Items */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-height: 300px;
+    /* Set a max height for the image grid */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding-right: 10px;
+    /* To prevent the scrollbar from overlapping the images */
+}
+
+.image-item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Delete Button */
+.delete-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 70%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal Controls Styling */
+.modal-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    position: absolute;
+    bottom: 20px;
+    gap: 20px;
+}
+
+/* Styling for Zoom In and Zoom Out buttons */
+/* Styling for Zoom In and Zoom Out buttons */
+.zoom-button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.zoom-out {
+    margin-left: 370px;
+    /* Adjust the position of the zoom-out button */
+}
+
+.zoom-in {
+    margin-right: 370px;
+    /* Adjust the position of the zoom-in button */
+}
+
+.zoom-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.zoom-button:focus {
+    outline: none;
+}
+
+/* Delete Confirmation Modal */
+.delete-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.delete-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.delete-modal-content p {
+    margin-bottom: 80px;
+    font-size: 16px;
+}
+
+.delete-modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Yes button - moved to the left */
+.confirm-button {
+    background-color: #e74c3c;
+    color: white;
+    margin-left: 200;
+    /* Moves the "Yes" button to the right side */
+}
+
+/* No button - moved to the right */
+.cancel-button {
+    background-color: #95a5a6;
+    color: white;
+    margin-right: 200;
+    /* Moves the "No" button to the left side */
+}
+
